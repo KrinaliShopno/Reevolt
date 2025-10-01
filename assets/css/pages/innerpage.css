@@ -1515,29 +1515,29 @@ Version: 1.0
   margin-bottom: 10px;
 }
 .medolia-cn-info.bg_one {
-  background-color: #FAF9FF;
+      background-color: #e3202614;
 }
 .medolia-cn-info.bg_one .icon {
-  background-color: #E7E0FF;
+  background-color: #e320264a;
 }
 .medolia-cn-info.bg_two {
-  background-color: #FFFBF3;
+  background-color: #ebe7df75;
 }
 .medolia-cn-info.bg_two .icon {
-  background-color: #FFEBC2;
+  background-color: #e4ddce;
 }
 .medolia-cn-info.bg_three {
-  background-color: #FFF6F5;
+  background-color: #000fff0d;
 }
 .medolia-cn-info.bg_three .icon {
-  background-color: #FFD0CC;
+  background-color: #0014ff12;
 }
 
 .medolia-contact-sec .medolia-image img {
   border-radius: 10px;
 }
 .medolia-contact-sec .contact-wrapper {
-  background-color: var(--primary-color);
+  background-color: var(--black-color);
   padding: 50px;
   border-radius: 10px;
 }

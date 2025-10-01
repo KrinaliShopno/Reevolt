@@ -27,16 +27,50 @@ Version: 1.0
 
 -------------------------------------------------------    */
 /* Hero Section CSS */
+
+.medolia-process-sec {
+    position: relative;
+    background: url('/assets/images/home-two/gallery/2148021405.jpg') no-repeat center center/cover;
+    color: #fff;
+    z-index: 1;
+    margin-top: 120px;
+}
+
+.medolia-process-sec .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000e8; /* black overlay with 60% opacity */
+    z-index: -1;
+}
+
+.medolia-process-item {
+    background: rgba(255,255,255,0.1); /* semi-transparent box */
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.medolia-process-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
 .medolia-hero {
   position: relative;
   z-index: 1;
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
   padding: 60px 0;
   overflow: hidden;
 }
 .medolia-hero .shape {
   position: absolute;
   z-index: -1;
+}
+.section-title-1 h2{
+  color: #fff;
 }
 @media screen and (max-width: 1199.98px) {
   .medolia-hero .shape {
@@ -286,7 +320,7 @@ Version: 1.0
   bottom: 0;
   right: 80px;
   border: 1px solid #E1EBE8;
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
   padding: 30px 20px;
   max-width: 300px;
   border-radius: 10px;
@@ -356,7 +390,7 @@ Version: 1.0
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
   padding: 15px;
   border-radius: 10px;
   max-width: 190px;
@@ -442,10 +476,10 @@ Version: 1.0
   }
 }
 .medolia-left-icon-box.bg-one .icon {
-  background-color: #e3202621;
+  background-color: #ECECED;
 }
 .medolia-left-icon-box.bg-two .icon {
-  background-color: #e3202621;
+  background-color: #ECECED;
 }
 
 /* Counter Section CSS */
@@ -503,7 +537,7 @@ Version: 1.0
   border-radius: 30px;
   font-weight: 500;
   font-family: var(--heading-font);
-  background-color: #F1F3FC;
+  background-color: #ECECED;
   color: var(--heading-color);
 }
 .medolia-service-box .icon {
@@ -534,7 +568,7 @@ Version: 1.0
 /* Treatment Section CSS */
 .medolia-treatment-sec {
   position: relative;
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
   z-index: 1;
 }
 .medolia-treatment-sec .treatment-bg {
@@ -609,6 +643,7 @@ Version: 1.0
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid var(--border-color);
+  color: #000000;
   background-color: var(--white-color);
 }
 .medolia-process-item .icon {
@@ -631,11 +666,12 @@ Version: 1.0
 }
 .medolia-process-item .content h4 {
   margin-bottom: 20px;
+  color: #fff;
 }
 
 /* Booking Section CSS */
 .medolia-booking-sec {
-  background-color: var(--gray-light-color);
+  background-color:#ECECED;
 }
 .medolia-booking-sec .medolia-image img {
   border-radius: 10px;
@@ -722,16 +758,16 @@ Version: 1.0
   border-radius: 10px;
 }
 .medolia-iconic-box.bg_one {
-  background-color: #E7E0FF;
+  background-color: #00000017;
 }
 .medolia-iconic-box.bg_two {
-  background-color: #FFD0CC;
+  background-color: #00000017;
 }
 .medolia-iconic-box.bg_three {
-  background-color: #FFEBC2;
+  background-color: #00000017;
 }
 .medolia-iconic-box.bg_four {
-  background-color: #D1F4C3;
+  background-color: #00000017;
 }
 .medolia-iconic-box .icon {
   border: 1px solid rgba(5, 27, 46, 0.2);
@@ -792,7 +828,7 @@ Version: 1.0
 
 /*  Testimonial Section CSS  */
 .medolia-testimonial-sec {
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
 }
 .medolia-testimonial-sec .medolia-image {
   padding-left: 85px;
@@ -869,7 +905,8 @@ Version: 1.0
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--gray-light-color);
+  background-color: #ECECED;
+  border-radius: 10px;
 }
 .medolia-faq-sec .medolia-image-box .medolia-info-area .icon {
   width: 60px;
