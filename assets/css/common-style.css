@@ -204,7 +204,7 @@ main {
 
 @media (min-width: 1451px) {
   .container {
-    max-width: 1314px;
+    max-width: 1400px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1450px) {
@@ -881,8 +881,11 @@ label {
   transition: all 0.3s;
 }
 .theme-btn.style-one {
-  background-color: var(--black-color);
+  background-color: #1f1f1f;
   color: var(--white-color);
+}
+.sub-title-1{
+      color: azure;
 }
 .theme-btn.style-one1 {
   background-color: var(--primary-color);
@@ -1011,7 +1014,7 @@ label {
   position: absolute;
   left: 0;
   top: 120%;
-  width: 265px;
+  width: 275px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.2s;
@@ -1262,6 +1265,7 @@ label {
 
 .header-one {
   background-color: var(--black-color);
+      box-shadow: 0px 8px 30px rgb(102 72 72 / 40%);
 }
 
 .header-three .container-fluid {
