@@ -620,6 +620,7 @@ Version: 1.0
   border-radius: 10px;
   position: relative;
   z-index: 1;
+  height: 100%;
 }
 .medolia-service-box .category-btn {
   position: absolute;

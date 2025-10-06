@@ -29,23 +29,47 @@ Version: 1.0
 
 -------------------------------------------------------    */
 .theme-btn.style-one:hover {
-  background-color: var(--heading-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 
 /* Page Banner CSS */
 .page-banner {
-  background-color: #00000017;
-  padding: 80px 0 80px;
+ position: relative;
+  background-image: url("/assets/images/home-one/hero/2151438523.jpg"); /* 🔹 your image here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  color: #fff;
+  z-index: 1;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4); /* optional outside shadow */
+  overflow: hidden;
+}
+/* Overlay for opacity */
+.page-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* adjust 0.3–0.6 for lighter/darker overlay */
+  z-index: 0;
+}
+
+/* Make content stay above overlay */
+.page-banner .container,
+.page-banner .page-content {
   position: relative;
   z-index: 1;
-  overflow: hidden;
 }
 @media screen and (max-width: 1199.98px) {
   .page-banner {
-    padding: 160px 0 80px;
+    padding: 80px 0 80px;
   }
 }
+
 .page-banner .shape {
   position: absolute;
   z-index: -1;
@@ -89,6 +113,7 @@ Version: 1.0
   font-size: 48px;
   line-height: 65px;
   margin-bottom: 15px;
+  color: var(--white-color);
 }
 @media screen and (max-width: 1199.98px) {
   .page-banner .page-content h1 {
@@ -104,17 +129,36 @@ Version: 1.0
 }
 .page-banner .page-content ul li {
   display: inline-block;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 .page-banner .page-content ul li:nth-child(2) {
   margin-left: 5px;
   margin-right: 5px;
 }
 .page-banner .page-content ul li a {
-  color: var(--heading-color);
+  color: var(--white-color);
 }
 
 /* About Page CSS */
+.medolia-image {
+    position: relative;
+    padding-right: 24px !important;
+    padding-bottom: 24px !important;
+    background: url("/assets/images/home-one/about/img-pattern-bg.jpg") repeat;
+}
+.medolia-image-1 {
+    position: relative;
+    padding-left: 24px !important;
+    padding-bottom: 24px !important;
+    background: url("/assets/images/home-one/about/img-pattern-bg.jpg") repeat;
+}
+.pur-line {
+    width: 80%;
+    background: #c3bfbf;
+    height: 1px;
+    margin: 0 auto;
+
+}
 .medolia-about-sec .medolia-image img {
   border-radius: 10px;
 }
@@ -1709,33 +1753,70 @@ Version: 1.0
   color: #007bff;
 }
 
-.dosage-grid, .facility-grid, .api-grid {
-  display: grid;
-  gap: 20px;
+.dosage-forms {
+  background-color: #fff;
 }
 
-.dosage-grid {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
 }
 
-.dosage-card, .facility-card, .api-card {
-  background: var(--gray-light-color);
+.section-header p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.dosage-card {
+  background: #fefeff29;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,20%);
-      gap: 15px;
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 100%;
+  cursor: pointer;
 }
 
-.dosage-card:hover, .facility-card:hover, .api-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.dosage-card img {
+  width: 100%;
+  /* max-width: 160px; */
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
+
+.dosage-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.dosage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+  .dosage-card img {
+    max-width: 120px;
+    height: 120px;
+  }
+
+  .dosage-card h4 {
+    font-size: 16px;
+  }
+}
+
 
 .facility-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1833,9 +1914,10 @@ Version: 1.0
 }
 
 .timeline-icon img {
-  width: 50px;
-  height:50px;
+  width: 40px;
+  height:40px;
 }
+
 
 .timeline-content {
   background: #fff;
@@ -1863,23 +1945,218 @@ Version: 1.0
   line-height: 1.6;
 }
 
-/* Responsive */
+/* ===== Tablets (max 1024px) ===== */
+@media (max-width: 1024px) {
+  .timeline-content {
+    width: 45%;
+    padding: 25px;
+  }
+.timeline-icon{
+  padding: 13px;
+}
+  .timeline-content h4 {
+    font-size: 22px;
+  }
+}
+
+/* ===== Mobile (max 768px) ===== */
 @media (max-width: 768px) {
   .principles-timeline::before {
-    left: 20px;
+    left: 30px;
+    transform: none;
   }
-  .timeline-item,
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0;
+    padding-left: 70px;
+  }
+
   .timeline-item.left,
   .timeline-item.right {
-    flex-direction: row;
     justify-content: flex-start;
-    padding: 0 0 0 60px;
   }
+
   .timeline-content {
     width: 100%;
+    margin: 0;
+    padding: 20px;
   }
+
   .timeline-icon {
-    left: 20px;
+    position: absolute;
+    left: 5px;
+    top: 0;
     transform: none;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-icon img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ===== Extra Small (max 480px) ===== */
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+
+  .timeline-content h4 {
+    font-size: 20px;
+  }
+
+  .timeline-content p {
+    font-size: 15px;
+  }
+}
+.product-details {
+  background: #fff;
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.product-info p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.small-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.small-thumb:hover,
+.small-thumb.active {
+  border-color: var(--primary-color);
+}
+
+.benefit-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.benefit-list {
+  list-style: disc;
+  margin-left: 25px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .product-title {
+    font-size: 26px;
+  }
+
+  .product-info p {
+    font-size: 15px;
+  }
+
+  .small-thumb {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* Product Image Box */
+.product-image-box {
+  text-align: center;
+}
+
+/* Main Image Box */
+.product-image-box .main-image {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.product-image-box .main-image img {
+  width: 100%;
+  height: 400px;            /* fixed height for uniform display */
+  object-fit: contain;      /* keeps image proportion intact */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-image-box .main-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Thumbnail Images */
+.product-image-box .thumbs {
+  margin-top: 20px;
+}
+
+.product-image-box .small-thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-image-box .small-thumb:hover,
+.product-image-box .small-thumb.active {
+  border-color: var(--black-color);
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .product-image-box .main-image img {
+    height: 320px;
+  }
+
+  .product-image-box .small-thumb {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-image-box .main-image img {
+    height: 260px;
+  }
+
+  .product-image-box .small-thumb {
+    width: 65px;
+    height: 65px;
   }
 }
