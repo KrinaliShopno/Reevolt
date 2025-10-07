@@ -186,7 +186,7 @@ Version: 1.0
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column;
+            /* flex-direction: column; */
   }
 }
 @media (max-width: 767.98px) {
@@ -306,7 +306,7 @@ Version: 1.0
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 #events-section .event-card {
   border: 1px solid #ddd;
@@ -1114,4 +1114,41 @@ Version: 1.0
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+@media (max-width:425px) {
+  .medolia-hero {
+   
+    padding: 50px 0;
+}
+    .medolia-hero .hero-content h1 {
+        font-size: 31px;
+        line-height: 50px;
+    }
+    .medolia-counter-sec {
+    background-color: #000000;
+    margin-top: 30px;
+    padding: 50px 0px;
+}
+.medolia-treatment-sec {
+    position: relative;
+    background-color: #ECECED;
+    z-index: 1;
+    padding: 20px 0px;
+    margin: 50px 0px;
+}
+.medolia-counter-sec .medolia-counter-item .content h2 {
+    color: var(--white-color);
+    font-size: 40px;
+}
+.medolia-counter-sec .medolia-counter-item .content h4 {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+    .medolia-counter-sec .medolia-counter-item {
+        border: 1px solid var(--white-color);
+        padding: 25px;
+        margin-bottom: 30px;
+    }
 }

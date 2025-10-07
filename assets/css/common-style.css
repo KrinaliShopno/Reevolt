@@ -580,8 +580,27 @@ label {
     height: auto;
     animation: pulse 2s infinite;
 }
+.medolia-content-box{
+  margin-top: 20px;
 }
+}
+@media (max-width: 425px) {
+  .medolia-about-sec {
+    padding-top: 25px;   /* instead of pt-60 */
+    padding-bottom: 0px; /* instead of pb-60 */
+  }
 
+  /* Optional: You can also adjust inner content */
+  .medolia-about-sec h2 {
+    font-size: 22px;
+    text-align: start;
+  }
+
+  .medolia-about-sec p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.1); opacity: 0.8; }
@@ -704,42 +723,6 @@ label {
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @-webkit-keyframes marquee {
   100% {
@@ -1006,6 +989,11 @@ label {
 }
 .header-navigation .site-branding {
   max-width: 200px;
+}
+@media (max-width:425px) {
+  .header-navigation .site-branding {
+  max-width: 150px;
+}
 }
 .header-navigation .main-menu ul > li {
   display: inline-block;
