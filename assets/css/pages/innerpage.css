@@ -169,6 +169,7 @@ Version: 1.0
     /* margin: 0px auto; */
     margin-left: 15px;
 }
+
 }
 .medolia-about-sec .medolia-image img {
   border-radius: 10px;
@@ -660,6 +661,46 @@ Version: 1.0
   .medolia-pricing-item {
     padding: 40px 30px;
   }
+  .medolia-service-box {
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    height: 450px;
+}
+}
+
+@media (max-width:1024px) {
+  .medolia-service-box {
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+}
+}
+
+@media (max-width:768px) {
+  .medolia-service-box {
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    height: 520px;
+}
+}
+@media (max-width:425px) {
+  .medolia-service-box {
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    height: 550px;
+}
 }
 .medolia-pricing-item:hover {
   background-color: var(--black-color);
