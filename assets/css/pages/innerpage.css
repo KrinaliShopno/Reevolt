@@ -1554,7 +1554,7 @@ Version: 1.0
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: var(--heading-color);
+  color: var(--white-color);
   font-size: 30px;
   margin-bottom: 35px;
 }
@@ -1571,10 +1571,11 @@ Version: 1.0
   margin-bottom: 10px;
 }
 .medolia-cn-info.bg_one {
-      background-color: #e3202614;
+      /* background-color: #e3202614; */
+      border: 1px solid #d7d2d2;
 }
 .medolia-cn-info.bg_one .icon {
-  background-color: #e320264a;
+  background-color: #000000;
 }
 .medolia-cn-info.bg_two {
   background-color: #ebe7df75;

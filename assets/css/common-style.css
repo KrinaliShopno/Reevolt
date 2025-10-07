@@ -574,14 +574,24 @@ label {
     height: auto;
     animation: pulse 2s infinite;
 }
+
 @media (max-width:425px) {
   .loading img {
     width: 150px;  /* adjust size */
     height: auto;
     animation: pulse 2s infinite;
 }
+
 .medolia-content-box{
   margin-top: 20px;
+}
+}
+@media (max-width:768px) {
+  .medolia-contact-info-sec{
+  padding: 50px 0px 0px 0px;
+}
+.medolia-contact-sec{
+   padding: 0px 0px 50px 0px;
 }
 }
 @media (max-width: 425px) {
