@@ -920,7 +920,10 @@ label {
 .theme-btn.style-one1 {
   background-color: var(--primary-color);
   color: var(--white-color);
+      padding: 13px;
+          border-radius: 50px;
 }
+
 .theme-btn.style-one1:hover {
   background-color: var(--white-color);
   color: var(--black-color);
@@ -1650,3 +1653,27 @@ label {
 .footer-three .copyright-area {
   background-color: #0E1E27;
 }
+
+.typing-banner{
+  color: var(--primary-color);
+  align-items: center;
+  text-align: center;
+}
+
+     .typewriter2{
+            color:#ffffff;
+            background-color: var(--primary-color);
+            font-size:31px;
+            font-weight:400;
+            border-right:3px solid #fff;
+            padding-right:5px;
+            white-space:nowrap;
+            overflow:hidden;
+            animation: blink2 0.10s infinite;
+            padding: 20px;
+        }
+        @keyframes blink2{
+            0% { border-color: transparent; }
+            50% { border-color: #fff; }
+            100% { border-color: transparent; }
+        }

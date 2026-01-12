@@ -106,7 +106,8 @@
                             </nav>
                             <!--=== Theme Nav Button ===-->
                             <div class="theme-nav-button mt-3 d-block d-md-none">
-                                <a href="contact.html" class="theme-btn style-one1">Get Appointment</a>
+                                <a href="tel:3443443434" class="theme-btn style-one1"> <i
+                                        class="fas fa-phone-alt"></i></a>
                             </div>
                             <!--=== Theme Menu Bottom ===-->
                             <div class="theme-menu-bottom mt-5 d-block d-lg-none">
@@ -122,7 +123,8 @@
                         <!--=== Header Nav Right ===-->
                         <div class="nav-right-item">
                             <div class="nav-button d-none d-md-block">
-                                <a href="contact.html" class="theme-btn style-one1">Get Appointment</a>
+                                <a href="tel:3443443434" class="theme-btn style-one1"> <i
+                                        class="fas fa-phone-alt"></i></a>
                             </div>
                             <div class="navbar-toggler">
                                 <span></span>
@@ -197,6 +199,10 @@
                 </div>
             </div>
         </section><!--====== End Hero Section ======-->
+        <section class="typing-banner">
+            <div class="typewriter2" id="typeText"></div>
+        </section>
+
         <!--====== Start About Section ======-->
         <section class="medolia-about-sec pt-130 pb-120">
             <div class="container">
@@ -281,11 +287,11 @@
                 </div>
             </div>
         </section><!--====== End Counter Section ======-->
-   
+
         <!--====== Start Treatment Section ======-->
         <section class="medolia-treatment-sec mt-130 mb-110 pb-100 pt-100">
             <!-- Treatment bg -->
-         
+
             <div class="container">
                 <div class="row justify-content-start">
                     <div class="col-xl-6">
@@ -324,7 +330,7 @@
                     </div>
                 </div>
             </div>
-               <div class="treatment-bg bg_cover"
+            <div class="treatment-bg bg_cover"
                 style="background-image: url(assets/images/home-one/gallery/treatment-bg.jpg);"></div>
         </section><!--====== End Treatment Section ======-->
         <!--====== Start Process Section ======-->
@@ -725,6 +731,42 @@
             }, 3000); // match animation: 3s
         });
     </script>
+
+
+<script>
+    const text = "Building knowledge. Building skills. Building leaders.";
+    const typingSpeed = 70;
+    const deletingSpeed = 40;
+    const delayAfterTyping = 1500;
+    const delayAfterDeleting = 800;
+    const minVisibleChars = 19; // :star: first 5 letters will never be deleted
+    let index = 0;
+    let isDeleting = false;
+    const el = document.getElementById("typeText");
+    function typeEffect() {
+        if (!isDeleting) {
+            // Typing
+            el.textContent = text.substring(0, index + 1);
+            index++;
+            if (index === text.length) {
+                setTimeout(() => isDeleting = true, delayAfterTyping);
+            }
+        } else {
+            // Deleting (stop at minVisibleChars)
+            if (index > minVisibleChars) {
+                el.textContent = text.substring(0, index - 1);
+                index--;
+            } else {
+                // Stop deleting & start typing again
+                setTimeout(() => isDeleting = false, delayAfterDeleting);
+            }
+        }
+        const speed = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(typeEffect, speed);
+    }
+    window.onload = typeEffect;
+</script>
+
 </body>
 
 <!-- Mirrored from html.pixelfit.agency/medolia/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Sep 2025 07:16:16 GMT -->
