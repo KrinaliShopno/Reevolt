@@ -1,0 +1,327 @@
+/*=============================================================================
+  HERO CAROUSEL - Reevolt Pharma
+  Clean styling with #e30016 and black only, no gradients
+  ============================================================================= */
+
+/* ==========================================================================
+   CAROUSEL CONTAINER
+   ========================================================================== */
+.hero-carousel-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-swiper {
+    width: 100%;
+    height: 85vh;
+    min-height: 550px;
+    max-height: 800px;
+}
+
+/* ==========================================================================
+   INDIVIDUAL SLIDES
+   ========================================================================== */
+.hero-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Clean dark overlay for text readability */
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+/* ==========================================================================
+   SLIDE CONTENT
+   ========================================================================== */
+.hero-slide .container {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-slide-content {
+    max-width: 600px;
+    padding: 40px 0;
+}
+
+/* Badge - Solid red */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #e30016;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.hero-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Headline */
+.hero-slide-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Description */
+.hero-slide-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+/* ==========================================================================
+   HERO BUTTONS - Solid Colors Only
+   ========================================================================== */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: #e30016;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+}
+
+.btn-hero-primary:hover {
+    background: #c00013;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(227, 0, 22, 0.3);
+    color: #fff;
+}
+
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.btn-hero-secondary:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   NAVIGATION ARROWS - Clean Style
+   ========================================================================== */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 300ms ease;
+}
+
+.hero-swiper .swiper-button-prev:hover,
+.hero-swiper .swiper-button-next:hover {
+    background: #e30016;
+    border-color: #e30016;
+}
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hero-swiper .swiper-button-prev {
+    left: 24px;
+}
+
+.hero-swiper .swiper-button-next {
+    right: 24px;
+}
+
+/* ==========================================================================
+   PAGINATION DOTS - Clean Style
+   ========================================================================== */
+.hero-swiper .swiper-pagination {
+    bottom: 32px;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 6px !important;
+    transition: all 300ms ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 12px;
+    background: #e30016;
+}
+
+/* ==========================================================================
+   SLIDE ANIMATIONS
+   ========================================================================== */
+.swiper-slide-active .hero-badge {
+    animation: slideUp 600ms ease forwards;
+}
+
+.swiper-slide-active .hero-slide-content h1 {
+    animation: slideUp 600ms ease 100ms forwards;
+    opacity: 0;
+}
+
+.swiper-slide-active .hero-slide-content p {
+    animation: slideUp 600ms ease 200ms forwards;
+    opacity: 0;
+}
+
+.swiper-slide-active .hero-buttons {
+    animation: slideUp 600ms ease 300ms forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    .hero-swiper {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .hero-slide-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-slide-content p {
+        font-size: 16px;
+    }
+
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-swiper .swiper-button-prev::after,
+    .hero-swiper .swiper-button-next::after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-swiper {
+        height: 65vh;
+        min-height: 450px;
+    }
+
+    .hero-slide-content {
+        max-width: 100%;
+        padding: 24px 0;
+    }
+
+    .hero-slide-content h1 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .hero-slide-content p {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .hero-badge {
+        padding: 8px 16px;
+        font-size: 11px;
+        margin-bottom: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        padding: 14px 24px;
+    }
+
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
+        display: none;
+    }
+
+    .hero-swiper .swiper-pagination {
+        bottom: 20px;
+    }
+}

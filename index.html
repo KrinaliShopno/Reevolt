@@ -37,6 +37,13 @@
     <link rel="stylesheet" href="assets/css/common-style.css">
     <!--====== Home css ======-->
     <link rel="stylesheet" href="assets/css/pages/home-one.css">
+    <!--====== UI Enhancements CSS ======-->
+    <link rel="stylesheet" href="assets/css/ui-enhancements.css">
+    <!--====== Animations CSS ======-->
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!--====== Hero Carousel CSS ======-->
+    <link rel="stylesheet" href="assets/css/hero-carousel.css">
+    <!--====== Swiper CSS ======-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -141,67 +148,76 @@
         </div>
     </header><!--======  End Header Area  ======-->
     <main>
-        <!--====== Start Certified-hero Section ======-->
-        <section class="medolia-hero">
-            <!-- <div class="shape shape-one"><span></span></div>
-            <div class="shape shape-two"><span></span></div>
-            <div class="shape shape-three"><span></span></div> -->
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <!-- Hero Content -->
-                        <div class="hero-content text-center text-xl-start">
-                            <span class="sub-title-1" data-aos="fade-up" data-aos-duration="1000">Wish Your Happy
-                                Life</span>
-                            <h1 data-aos="fade-up" data-aos-duration="1200">Personalized Care Healthier You</h1>
-                            <p data-aos="fade-up" data-aos-duration="1400" style="color: #fff;"> Pharma delivers the top
-                                notch quality innovative products, with a well-experienced dynamic field force that
-                                believes in serving the society.</p>
-                            <div class="medolia-button-box d-flex align-items-start" data-aos="fade-up"
-                                data-aos-duration="1600">
-                                <div class="medolia-button">
-                                    <a href="contact.html" class="theme-btn style-one">know more</a>
+        <!--====== Start Hero Carousel Section ======-->
+        <section class="hero-carousel-section">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 - Innovation & Research -->
+                    <div class="swiper-slide hero-slide"
+                        style="background-image: url('assets/images/home-one/hero/carousel-slide-1.png');">
+                        <div class="hero-decoration hero-decoration-1"></div>
+                        <div class="hero-decoration hero-decoration-2"></div>
+                        <div class="container">
+                            <div class="hero-slide-content">
+                                <span class="hero-badge">Innovation in Healthcare</span>
+                                <h1>Advancing Healthcare Through Research Excellence</h1>
+                                <p>At Reevolt Pharma, we combine cutting-edge research with compassionate care to
+                                    deliver innovative pharmaceutical solutions that transform lives globally.</p>
+                                <div class="hero-buttons">
+                                    <a href="about.html" class="btn-hero-primary">Discover More</a>
+                                    <a href="products.html" class="btn-hero-secondary">Our Products</a>
                                 </div>
-                                <!-- <div class="medolia-author-box">
-                                    <div class="author-thumbnail">
-                                        <img src="assets/images/home-one/hero/support.jpg" alt="author">
-                                    </div>
-                                    <div class="author-info">
-                                        <span>Call Us Anytime</span>
-                                        <h5><a href="tel:
-+91 261 2538898">+91 261 2538898</a></h5>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-8">
-                        <!-- Hero Image Box -->
-                        <div class="hero-image-box">
-                            <!-- <div class="medolia-image" data-aos="fade-up" data-aos-duration="1000">
-                                <img src="assets/images/home-one/hero/hero-img1.png" alt="Hero Image">
-                            </div> -->
-                            <!-- <div class="text-shape ts-one" data-aos="fade-down" data-aos-duration="1200"><a
-                                    href="service-details.html">Orthopedics</a></div>
-                            <div class="text-shape ts-two" data-aos="fade-down" data-aos-duration="1400"><a
-                                    href="service-details.html">Cardiology</a></div>
-                            <div class="medolia-avatar-box" data-aos="fade-up" data-aos-duration="1600">
-                                <div class="medolia-avatar">
-                                    <h5>Patient Recovers</h5>
-                                    <ul class="avatar-list">
-                                        <li><img src="assets/images/home-one/hero/avatar1.jpg" alt="avatar"></li>
-                                        <li><img src="assets/images/home-one/hero/avatar2.jpg" alt="avatar"></li>
-                                        <li><img src="assets/images/home-one/hero/avatar3.jpg" alt="avatar"></li>
-                                        <li><img src="assets/images/home-one/hero/avatar4.jpg" alt="avatar"></li>
-                                        <li><span>5k+</span></li>
-                                    </ul>
+
+                    <!-- Slide 2 - Manufacturing Excellence -->
+                    <div class="swiper-slide hero-slide"
+                        style="background-image: url('assets/images/home-one/hero/carousel-slide-2.png');">
+                        <div class="hero-decoration hero-decoration-1"></div>
+                        <div class="hero-decoration hero-decoration-2"></div>
+                        <div class="container">
+                            <div class="hero-slide-content">
+                                <span class="hero-badge">Quality Assurance</span>
+                                <h1>World-Class Manufacturing Standards</h1>
+                                <p>Our state-of-the-art manufacturing facilities ensure every product meets the highest
+                                    international quality standards with precision and care.</p>
+                                <div class="hero-buttons">
+                                    <a href="company.html" class="btn-hero-primary">Learn More</a>
+                                    <a href="contact.html" class="btn-hero-secondary">Contact Us</a>
                                 </div>
-                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - Global Reach -->
+                    <div class="swiper-slide hero-slide gradient-overlay"
+                        style="background-image: url('assets/images/home-one/hero/carousel-slide-3.png');">
+                        <div class="hero-decoration hero-decoration-1"></div>
+                        <div class="hero-decoration hero-decoration-2"></div>
+                        <div class="container">
+                            <div class="hero-slide-content">
+                                <span class="hero-badge">Global Presence</span>
+                                <h1>Serving Healthcare Needs Worldwide</h1>
+                                <p>With operations spanning 30+ countries, we deliver trusted pharmaceutical solutions
+                                    to healthcare providers and patients across the globe.</p>
+                                <div class="hero-buttons">
+                                    <a href="about.html" class="btn-hero-primary">Our Journey</a>
+                                    <a href="careers.html" class="btn-hero-secondary">Join Our Team</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
             </div>
-        </section><!--====== End Hero Section ======-->
+        </section><!--====== End Hero Carousel Section ======-->
         <section class="typing-banner">
             <div class="typewriter2" id="typeText"></div>
         </section>
@@ -293,32 +309,32 @@
                         </div>
 
                         <div class="stat-item">
-                             <div class="d-flex justify-content-center">
-                            <div class="stat-number" data-target="30">0</div>
-                            <div class="stat-plus">+</div>
+                            <div class="d-flex justify-content-center">
+                                <div class="stat-number" data-target="30">0</div>
+                                <div class="stat-plus">+</div>
                             </div>
                             <div class="stat-text">Countries Operations</div>
                         </div>
 
                         <div class="stat-item">
-                             <div class="d-flex justify-content-center">
-                            <div class="stat-number" data-target="180">0</div>
-                            <div class="stat-plus">+</div>
+                            <div class="d-flex justify-content-center">
+                                <div class="stat-number" data-target="180">0</div>
+                                <div class="stat-plus">+</div>
                             </div>
                             <div class="stat-text">Registered Brands</div>
                         </div>
 
                         <div class="stat-item">
-                             <div class="d-flex justify-content-center">
-                            <div class="stat-number" data-target="3">0</div>
+                            <div class="d-flex justify-content-center">
+                                <div class="stat-number" data-target="3">0</div>
                             </div>
                             <div class="stat-text">Manufacturing Plants</div>
-                            </div>
                         </div>
-
                     </div>
 
                 </div>
+
+            </div>
 
             </div>
         </section>
@@ -972,6 +988,35 @@
             }
         });
 
+    </script>
+    <!--====== Hero Carousel Initialization ======-->
+    <script>
+        // Hero Carousel - Main banner slider
+        const heroSwiper = new Swiper(".hero-swiper", {
+            loop: true,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            keyboard: {
+                enabled: true,
+            },
+            grabCursor: true,
+        });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
