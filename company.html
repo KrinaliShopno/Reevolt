@@ -39,7 +39,69 @@
     <link rel="stylesheet" href="assets/css/ui-enhancements.css">
     <!--====== Animations CSS ======-->
     <link rel="stylesheet" href="assets/css/animations.css">
+    <style>
+        @media (max-width:1024px) {
+            .medolia-service-box {
+                border: 1px solid var(--border-color);
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                height: 450px;
+            }
+        }
+
+        @media(max-width: 991.98px) {
+            .medolia-pricing-item {
+                padding: 40px 30px;
+            }
+
+            .medolia-service-box {
+                border: 1px solid var(--border-color);
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                height: 560px;
+            }
+        }
+
+        @media (max-width:767px) {
+            .medolia-service-box {
+                border: 1px solid var(--border-color);
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                height: 450px;
+            }
+        }
+
+        @media (max-width:460px) {
+            .medolia-service-box {
+                border: 1px solid var(--border-color);
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                height: auto;
+            }
+        }
+
+        @media (max-width:425px) {
+            .medolia-service-box {
+                border: 1px solid var(--border-color);
+                padding: 30px;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                height: 550px;
+            }
+        }
+    </style>
 </head>
+
+
 
 <body>
     <div class="cursor_dot cursor_dot-main"></div>
@@ -51,7 +113,7 @@
 
     <script>
         const dots = document.querySelectorAll('.cursor_dot');
-        
+
         // Mouse coordinates store karva mate
         let mouseX = 0;
         let mouseY = 0;
@@ -70,7 +132,7 @@
 
             dots.forEach((dot, index) => {
                 const nextDot = dotCoords[index];
-                
+
                 // Update position with a slight lag (Ease effect)
                 nextDot.x += (x - nextDot.x) * 0.3;
                 nextDot.y += (y - nextDot.y) * 0.3;
@@ -134,12 +196,12 @@
                                                 <li><a href="index-4.html">Home 03</a></li>
                                             </ul> -->
                                     </li>
-                                          <li class="menu-item has-children"><a href="#">About Us</a>
-                                              <ul class="sub-menu">
-                                                  <li><a href="about.html">About Us</a></li>
-                                                <li><a href="our-value.html">Our Value</a></li>
-                                            </ul>
-                                        </li>
+                                    <li class="menu-item has-children"><a href="#">About Us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="our-value.html">Our Value</a></li>
+                                        </ul>
+                                    </li>
 
                                     <li class="menu-item has-children"><a href="company.html">Company</a>
 

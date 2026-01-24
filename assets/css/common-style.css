@@ -2594,7 +2594,38 @@ i.fas.fa-play {
   transition: all 0.35s ease;
   position: relative;
   border: 1px solid #e320263b;
+  /* height: 280px; */
+  height: 300px;
+}
+@media(max-width:1450px){
+  .why-card {
+  height: 350px;
+  }
+}
+@media(max-width:991px){
+  .why-card {
+  height: 330px;
+  }
+}
+@media(max-width:767px){
+  .why-card {
   height: 280px;
+  }
+}
+@media(max-width:470px){
+  .why-card {
+  height: 320px;
+  }
+}
+@media(max-width:440px){
+  .why-card {
+  height: 350px;
+  }
+}
+@media(max-width:380px){
+  .why-card {
+  height: auto;
+  }
 }
 
 .why-icon img {
