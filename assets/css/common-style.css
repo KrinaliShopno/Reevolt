@@ -2903,3 +2903,20 @@ i.fas.fa-play {
     color: #ffffff !important;
     transform: translateX(6px);
 }
+.cursor_dot {
+    width: 10px;
+    height: 10px;
+    background-color: #f3abab; /* Cream Color */
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+/* Lead dot (thodo motu) */
+.cursor_dot-main {
+    width: 13px;
+    height: 13px;
+    background-color: #f3abab;
+}

@@ -42,6 +42,57 @@
 </head>
 
 <body>
+    <div class="cursor_dot cursor_dot-main"></div>
+    <div class="cursor_dot"></div>
+    <div class="cursor_dot"></div>
+    <div class="cursor_dot"></div>
+    <div class="cursor_dot"></div>
+    <div class="cursor_dot"></div>
+
+    <script>
+        const dots = document.querySelectorAll('.cursor_dot');
+        
+        // Mouse coordinates store karva mate
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // Darekh dot potani position track karse
+        const dotCoords = Array.from({ length: dots.length }, () => ({ x: 0, y: 0 }));
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateDots() {
+            let x = mouseX;
+            let y = mouseY;
+
+            dots.forEach((dot, index) => {
+                const nextDot = dotCoords[index];
+                
+                // Update position with a slight lag (Ease effect)
+                nextDot.x += (x - nextDot.x) * 0.3;
+                nextDot.y += (y - nextDot.y) * 0.3;
+
+                dot.style.left = nextDot.x + 'px';
+                dot.style.top = nextDot.y + 'px';
+
+                // Pachhad na dots ni size ane opacity dhire dhire ghatse
+                const scale = (dots.length - index) / dots.length;
+                dot.style.transform = `translate(-50%, -50%) scale(${scale})`;
+                dot.style.opacity = scale;
+
+                // Next dot mate current dot ni position set karo
+                x = nextDot.x;
+                y = nextDot.y;
+            });
+
+            requestAnimationFrame(animateDots);
+        }
+
+        animateDots();
+    </script>
     <!--====== Start Loader Area ======-->
     <div id="preloader">
         <div class="loading">
